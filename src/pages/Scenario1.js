@@ -8,7 +8,7 @@ function Scenario1() {
       <Row className="border-bottom pb-3 mb-3">
         <Col>
           <h1>Subject: Concerns Regarding Potential Gender Bias in Emotion AI Software</h1>
-          <p className="text-muted">From: chuang@companyA.com</p>
+          <p className="text-muted">From: cynthia.huang@companyA.com</p>
           <p className="text-muted">To: you@emoai.com</p>
         </Col>
       </Row>
