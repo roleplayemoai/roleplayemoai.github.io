@@ -7,7 +7,7 @@ function Scenario2() {
       {/* Email UI */}
       <Row className="border-bottom pb-3 mb-3">
         <Col>
-          <h1>Subject: [from Leading IT Company]</h1>
+          <h1>Subject: Proposal for Collaboration on Emotion AI for Internal Assessment</h1>
           <p className="text-muted">From: representative@companyname.com</p>
           <p className="text-muted">To: you@emoai.com</p>
         </Col>
@@ -15,14 +15,28 @@ function Scenario2() {
       <Row>
         <Col>
           <p>
-            Dear EmoAI Customer Support Team, <br />
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Dear EmoAI Sale Representative,
             <br />
             <br />
-            Regards, <br />
-            [Representative Name] <br />
-            [Company Name]
+            I'm Mahadi Gupta from Company B. We are exploring the use of your Emotion AI software to develop an internal tool for evaluating employee performance.
+            <br />
+            <br />
+            We believe this collaboration presents a great opportunity to showcase your software's capabilities and position your company as a key partner for one of the largest global IT companies. If successful, we would be happy to feature your organization as a collaborator in our internal and external communications.
+            <br />
+            <br />
+            We'd like to discuss this opportunity further, including how we can tailor your software to meet our specific needs. Please let me know a suitable time for a meeting to explore the next steps.
+            <br />
+            <br />
+            Looking forward to your response.
+            <br />
+            <br />
+            Best regards,
+            <br />
+            Mahadi Gupta
+            <br />
+            Senior Project Manager
+            <br />
+            Company B
           </p>
         </Col>
       </Row>

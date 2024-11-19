@@ -7,22 +7,41 @@ function Scenario5() {
       {/* Email UI */}
       <Row className="border-bottom pb-3 mb-3">
         <Col>
-          <h1>Subject: [from School]</h1>
-          <p className="text-muted">From: representative@companyname.com</p>
+          <h1>Subject: Emotion AI Solutions for Enhancing Classroom Management and Student Well-being</h1>
+          <p className="text-muted">From: cjackson2@schoolE.edu</p>
           <p className="text-muted">To: you@emoai.com</p>
         </Col>
       </Row>
       <Row>
         <Col>
           <p>
-            Dear EmoAI Customer Support Team, <br />
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Dear Consultant,
             <br />
             <br />
-            Regards, <br />
-            [Representative Name] <br />
-            [Company Name]
+            I hope this email finds you well. My name is Cecile, and I serve as the Education Manager at Center First High School, a high school with a large student body comprising over a thousand students in each grade and more than fifty students per class. With only one teacher per class, we face significant challenges in effectively managing classrooms and addressing the individual needs of our students.
+            <br />
+            <br />
+            To address these challenges, our school is interested in leveraging Emotion AI technologies to:
+            <ul>
+              <li>Help teachers monitor and manage students' emotions and attention levels during class to ensure effective learning outcomes.</li>
+              <li>Identify students who may require additional support due to mental health concerns.</li>
+              <li>Assist teachers in creating a more personalized and inclusive learning environment.</li>
+            </ul>
+            We are considering the use of cameras in classrooms to collect facial data as a means to analyze students' emotional and attentional states. Given your expertise in Emotion AI, we would greatly value your insights on:
+            <ul>
+              <li>Recommended technologies or solutions that align with our objectives based on your product.</li>
+              <li>Advantages and disadvantages if we applied this technology in our school</li>
+            </ul>
+            Thank you for your time and expertise. We look forward to hearing from you.
+            <br />
+            <br />
+            Best regards,
+            <br />
+            Cecile Jackson
+            <br />
+            Education Manager
+            <br />
+            School E
           </p>
         </Col>
       </Row>

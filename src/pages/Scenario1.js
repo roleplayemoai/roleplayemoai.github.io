@@ -7,22 +7,33 @@ function Scenario1() {
       {/* Email UI */}
       <Row className="border-bottom pb-3 mb-3">
         <Col>
-          <h1>Subject: [from HR Company]</h1>
-          <p className="text-muted">From: representative@companyname.com</p>
+          <h1>Subject: Concerns Regarding Potential Gender Bias in Emotion AI Software</h1>
+          <p className="text-muted">From: chuang@companyA.com</p>
           <p className="text-muted">To: you@emoai.com</p>
         </Col>
       </Row>
       <Row>
         <Col>
           <p>
-            Dear EmoAI Customer Support Team, <br />
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Dear EmoAI Customer Support Team,
             <br />
             <br />
-            Regards, <br />
-            [Representative Name] <br />
-            [Company Name]
+            I'm reaching out from Company A regarding a concern with the Emotion AI software we use for evaluating candidates during video interviews.
+            <br />
+            <br />
+            Recently, one of the candidates of our customer raised a complaint on social media, claiming that your AI software is potentially biased toward male candidates. Upon reviewing the situation, we've noticed a potential pattern that aligns with the candidate's claim, which raises concerns about the fairness and credibility of our application.
+            <br />
+            <br />
+            This matter is critical not only for the integrity of our hiring process but also for maintaining our reputation with clients and candidates. We look forward to your prompt response and to working together to resolve this issue effectively.
+            <br />
+            <br />
+            Best regards,
+            <br />
+            Cynthia Huang (she/her)
+            <br />
+            Product Manager
+            <br />
+            Company A
           </p>
         </Col>
       </Row>

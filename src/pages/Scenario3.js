@@ -7,22 +7,33 @@ function Scenario3() {
       {/* Email UI */}
       <Row className="border-bottom pb-3 mb-3">
         <Col>
-          <h1>Subject: [from Digital Healthcare]</h1>
-          <p className="text-muted">From: representative@companyname.com</p>
+          <h1>Subject: Concerns About Accuracy of Emotion AI for Mental Health Assessments</h1>
+          <p className="text-muted">From: jc2563@companyC.com</p>
           <p className="text-muted">To: you@emoai.com</p>
         </Col>
       </Row>
       <Row>
         <Col>
           <p>
-            Dear EmoAI Customer Support Team, <br />
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Dear EmoAI Customer Support Team,
             <br />
             <br />
-            Regards, <br />
-            [Representative Name] <br />
-            [Company Name]
+            I hope this email finds you well. My name is Josep Garcés, and I'm writing on behalf of Company C regarding some concerns raised about the Emotion AI software we use to assess mental health conditions.
+            <br />
+            <br />
+            Recently, a user reported being flagged as “high risk” for anxiety, which caused them additional stress and feelings of stigma. We've since received similar feedback from other users, questioning both the accuracy and sensitivity of the assessments.
+            <br />
+            <br />
+            Given our commitment to providing supportive and trustworthy mental health services, we need to address these issues urgently. We would appreciate your clarification regarding this matter, as it is critical to maintaining our users' confidence in our digital healthcare solutions. Please let us know your thoughts and next steps at your earliest convenience.
+            <br />
+            <br />
+            Sincerely,
+            <br />
+            Josep Garcés
+            <br />
+            Chief Operating Officer
+            <br />
+            Company C
           </p>
         </Col>
       </Row>
