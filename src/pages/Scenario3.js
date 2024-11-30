@@ -29,11 +29,13 @@ function Scenario3() {
             <br />
             Sincerely,
             <br />
+            --
+            <br />
             Josep Garcés
             <br />
             Chief Operating Officer
             <br />
-            Company C
+            Company C [Digital Healthcare Provider]
           </p>
         </Col>
       </Row>

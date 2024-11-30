@@ -29,11 +29,13 @@ function Scenario1() {
             <br />
             Best regards,
             <br />
+            --
+            <br />
             Cynthia Huang (she/her)
             <br />
             Product Manager
             <br />
-            Company A
+            Company A [HR Company]
           </p>
         </Col>
       </Row>

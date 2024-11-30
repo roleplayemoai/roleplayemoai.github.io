@@ -8,7 +8,7 @@ function Scenario2() {
       <Row className="border-bottom pb-3 mb-3">
         <Col>
           <h1>Subject: Proposal for Collaboration on Emotion AI for Internal Assessment</h1>
-          <p className="text-muted">From: representative@companyname.com</p>
+          <p className="text-muted">From: mgupta@companyB.com</p>
           <p className="text-muted">To: you@emoai.com</p>
         </Col>
       </Row>
@@ -32,11 +32,13 @@ function Scenario2() {
             <br />
             Best regards,
             <br />
+            --
+            <br />
             Mahadi Gupta
             <br />
             Senior Project Manager
             <br />
-            Company B
+            Company B [Leading IT Company]
           </p>
         </Col>
       </Row>

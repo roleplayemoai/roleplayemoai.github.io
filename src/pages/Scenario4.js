@@ -7,7 +7,7 @@ function Scenario4() {
       {/* Email UI */}
       <Row className="border-bottom pb-3 mb-3">
         <Col>
-          <h1>Subject: Ask for suggestion for applied Emotion AI in our real-time emotion tracking</h1>
+          <h1>Subject: Ask for Suggestion for Applied Emotion AI in Our Real-Time Emotion Tracking</h1>
           <p className="text-muted">From: stacey@companyD.com</p>
           <p className="text-muted">To: you@emoai.com</p>
         </Col>
@@ -40,7 +40,7 @@ function Scenario4() {
             <br />
             Product Manager
             <br />
-            Company D
+            Company D [Video Company]
           </p>
         </Col>
       </Row>
