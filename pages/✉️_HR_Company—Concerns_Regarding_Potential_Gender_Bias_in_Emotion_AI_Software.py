@@ -13,6 +13,7 @@ email_sender = "Cynthia Huang"
 email_sender_email = "cynthia.huang@companyA.com"
 email_subject = "Concerns Regarding Potential Gender Bias in Emotion AI Software"
 email_content = """
+
 Dear EmoAI Customer Support Team,
 
 I'm reaching out from Company A regarding a concern with the Emotion AI software we use for evaluating candidates during video interviews.

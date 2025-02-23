@@ -17,14 +17,15 @@ body {
     border: 0px !important;
 } */
 
-.email-subject {
+.email-subject,.welcome {
     font-size: 20px;
     color: #000000;
     margin-bottom: 15px;
 }
 
-.email-sender {
+.email-sender, .section {
     font-size: 16px;
+    font-weight: 600;
     color: #000000;
     margin-bottom: 15px;
 }
@@ -47,6 +48,12 @@ body {
     color: #000000;
     margin-bottom: 15px;
 }
+
+.footnote {
+    font-size: 14px;
+    color: #7e7e7e;
+}
+
 
 .st-key-reply_button button {
     background-color: white !important;
