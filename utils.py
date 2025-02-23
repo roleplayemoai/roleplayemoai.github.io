@@ -25,9 +25,9 @@ our_email_sender = "You"
 our_email_sender_email = "you@emoai.com"
 
 signature = """\n\n
----
-You
-you@emoai.com
+-- \\
+You \\
+you@emoai.com \\
 EmoAI Inc."""
 
 
