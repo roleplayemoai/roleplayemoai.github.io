@@ -47,6 +47,7 @@ body {
     font-size: 16px;
     color: #000000;
     margin-bottom: 15px;
+    line-height: 1.4;
 }
 
 .footnote {
@@ -92,6 +93,20 @@ body {
 }
 
 .st-key-save_button button:hover {
+    background-color: #f0f0f0 !important;
+    border-color: #666666 !important;
+    color: #444444 !important;
+}
+
+.st-key-forward_button button {
+    background-color: white !important;
+    border-color: #666666 !important;
+    color: #444444 !important;
+    border-radius: 25px !important;
+    padding: 0px 20px !important;
+}
+
+.st-key-forward_button button:hover {
     background-color: #f0f0f0 !important;
     border-color: #666666 !important;
     color: #444444 !important;

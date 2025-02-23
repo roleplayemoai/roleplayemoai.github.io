@@ -25,9 +25,9 @@ our_email_sender = "You"
 our_email_sender_email = "you@emoai.com"
 
 signature = """\n\n
--- \\
-You \\
-you@emoai.com \\
+---
+You
+you@emoai.com
 EmoAI Inc."""
 
 
@@ -35,7 +35,13 @@ client = MongoClient(st.secrets["MONGO_URI"])
 db = client["emoai"]
 
 
-def save_response(participant_id, scenario_name, response_index, response=None):
+def text_to_safe_html(text):
+    return text.replace("\n", "<br>")
+
+
+def save_response(
+    participant_id, scenario_name, response_index, response=None, forward_to=None
+):
     collection = db["responses"]
 
     if response is None:
@@ -47,13 +53,17 @@ def save_response(participant_id, scenario_name, response_index, response=None):
             f"reply_text_area_{participant_id}_{scenario_name}_{response_index}"
         ]
 
+    update_data = {"response": response}
+    if forward_to is not None:
+        update_data["forward_to"] = forward_to
+
     collection.update_one(
         {
             "participant_id": participant_id,
             "scenario_name": scenario_name,
             "response_index": response_index,
         },
-        {"$set": {"response": response}},
+        {"$set": update_data},
         upsert=True,
     )
 
@@ -125,7 +135,7 @@ def scenario(
         unsafe_allow_html=True,
     )
     content.markdown(
-        f"<div class='email-content'>{email_content}</div>",
+        f"<div class='email-content'>{text_to_safe_html(email_content)}</div>",
         unsafe_allow_html=True,
     )
 
@@ -141,7 +151,7 @@ def scenario(
                 unsafe_allow_html=True,
             )
             content.markdown(
-                f"<div class='email-content'>{sent_response}</div>",
+                f"<div class='email-content'>{text_to_safe_html(sent_response)}</div>",
                 unsafe_allow_html=True,
             )
         elif (
@@ -149,14 +159,15 @@ def scenario(
         ) is not None:
             icon, content = st.columns([1, 14])
             icon.image("images/icon.png")
-            content.text_area(
+            new_response = content.text_area(
                 "Reply",
                 height=250,
                 value=response,
                 label_visibility="hidden",
                 key=f"reply_text_area_{participant_id}_{scenario_name}_{i}",
-                on_change=save_response(participant_id, scenario_name, i),
             )
+            if new_response != response:
+                save_response(participant_id, scenario_name, i, new_response)
             if content.button(
                 "Send",
                 key="send_button",
@@ -166,11 +177,28 @@ def scenario(
                 st.rerun()
             break
         else:
-            if content.button(
-                "Reply",
-                key="reply_button",
-            ):
-                save_response(participant_id, scenario_name, i, signature)
-                st.rerun()
+            if i == 0:
+                col1, col2, _ = content.columns([1, 2, 10])
+                if col1.button(
+                    "Reply",
+                    key="reply_button",
+                ):
+                    save_response(participant_id, scenario_name, i, signature)
+                    st.session_state.forward_to = None
+                    st.rerun()
+                if col2.button(
+                    "Forward",
+                    key="forward_button",
+                ):
+                    save_response(participant_id, scenario_name, i, signature)
+                    st.session_state.forward_to = "example@gmail.com"
+                    st.rerun()
+            else:
+                if content.button(
+                    "Reply",
+                    key="reply_button",
+                ):
+                    save_response(participant_id, scenario_name, i, signature)
+                    st.rerun()
             break
         i += 1

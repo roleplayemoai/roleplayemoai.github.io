@@ -12,8 +12,7 @@ st.set_page_config(
 email_sender = "Mahadi Gupta"
 email_sender_email = "mgupta@companyB.com"
 email_subject = "Proposal for Collaboration on Emotion AI for Internal Assessment"
-email_content = """
-
+email_content = """\
 Dear EmoAI Sale Representative,
 
 I'm Mahadi Gupta from Company B. We are exploring the use of your Emotion AI software to develop an internal tool for evaluating employee performance.
@@ -26,9 +25,9 @@ Looking forward to your response.
 
 Best regards,
 
--- \\
-Mahadi Gupta \\
-Senior Project Manager \\
+---
+Mahadi Gupta
+Senior Project Manager
 Company B [Leading IT Company]"""
 
 if __name__ == "__main__":
