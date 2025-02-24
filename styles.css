@@ -6,6 +6,10 @@ body {
     font-size: 16px;
 }
 
+button {
+    margin-bottom: 10px !important;
+}
+
 .stTextArea textarea {
     background-color: white !important;
     border: 1px solid #bbbabab1 !important;
@@ -106,4 +110,8 @@ body {
     background-color: #f0f0f0 !important;
     border-color: #666666 !important;
     color: #444444 !important;
+}
+
+.stHorizontalBlock {
+    gap: 0px !important;
 }

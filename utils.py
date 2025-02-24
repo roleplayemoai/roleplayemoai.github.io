@@ -197,19 +197,22 @@ def scenario(
                 st.rerun()
             break
         else:
-            if content.button(
-                "Reply",
-                key="reply_button",
-            ):
-                save_response(participant_id, scenario_name, i, signature)
-                st.session_state.forward_to = None
-                st.rerun()
-            if content.button(
-                "Forward",
-                key="forward_button",
-            ):
-                save_response(participant_id, scenario_name, i, signature)
-                st.session_state.forward_to = "Team Lead"
-                st.rerun()
+            col1, col2, col3 = content.columns([2,2.5,8])
+            with col1:
+                if st.button(
+                    "Reply",
+                    key="reply_button",
+                ):
+                    save_response(participant_id, scenario_name, i, signature)
+                    st.session_state.forward_to = None
+                    st.rerun()
+            with col2:
+                if st.button(
+                    "Forward",
+                    key="forward_button",
+                ):
+                    save_response(participant_id, scenario_name, i, signature)
+                    st.session_state.forward_to = "Team Lead"
+                    st.rerun()
             break
         i += 1
