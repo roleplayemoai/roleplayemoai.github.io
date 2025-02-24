@@ -6,16 +6,12 @@ body {
     font-size: 16px;
 }
 
-/* .stTextArea textarea {
+.stTextArea textarea {
     background-color: white !important;
     border: 1px solid #bbbabab1 !important;
-    border-radius: 10px !important;
+    border-radius: 7px !important;
     padding: 15px !important;
 }
-
-.stTextArea {
-    border: 0px !important;
-} */
 
 .email-subject,.welcome {
     font-size: 20px;

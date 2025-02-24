@@ -83,6 +83,10 @@ def get_saved_response(participant_id, scenario_name, response_index):
 def send_response(participant_id, scenario_name, response_index):
     collection = db["sent_responses"]
     response = get_saved_response(participant_id, scenario_name, response_index)
+
+    if forward_to := st.session_state.get("forward_to", None):
+        response = f"Forwarding to {forward_to}\n-----------------------------------------------------------------\n\n{response}"
+
     collection.update_one(
         {
             "participant_id": participant_id,
@@ -159,15 +163,26 @@ def scenario(
         ) is not None:
             icon, content = st.columns([1, 14])
             icon.image("images/icon.png")
+            if forward_to := st.session_state.get("forward_to", None):
+                new_forward_to = content.selectbox(
+                    "Forwarding to",
+                    options=["a@gmail.com", "b@gmail.com", "c@gmail.com"],
+                    index=0,
+                    key=f"forward_to_selectbox_{participant_id}_{scenario_name}_{i}",
+                )
+                if new_forward_to != forward_to:
+                    st.session_state.forward_to = new_forward_to
+                    st.rerun()
             new_response = content.text_area(
                 "Reply",
                 height=250,
                 value=response,
-                label_visibility="hidden",
+                label_visibility="collapsed",
                 key=f"reply_text_area_{participant_id}_{scenario_name}_{i}",
             )
             if new_response != response:
                 save_response(participant_id, scenario_name, i, new_response)
+                st.rerun()
             if content.button(
                 "Send",
                 key="send_button",
@@ -178,20 +193,19 @@ def scenario(
             break
         else:
             if i == 0:
-                col1, col2, _ = content.columns([1, 2, 10])
-                if col1.button(
+                if content.button(
                     "Reply",
                     key="reply_button",
                 ):
                     save_response(participant_id, scenario_name, i, signature)
                     st.session_state.forward_to = None
                     st.rerun()
-                if col2.button(
+                if content.button(
                     "Forward",
                     key="forward_button",
                 ):
                     save_response(participant_id, scenario_name, i, signature)
-                    st.session_state.forward_to = "example@gmail.com"
+                    st.session_state.forward_to = "a@gmail.com"
                     st.rerun()
             else:
                 if content.button(
