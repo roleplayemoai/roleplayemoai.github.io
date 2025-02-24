@@ -15,7 +15,7 @@ DEBUG = True
 def main():
     st.markdown(
         """
-        <div class='welcome'>👋 Welcome to EmoAI</div>
+        <div class='welcome'>👋 Welcome to EmoAI Inc.</div>
         <p>
             We are a startup company that provides Emotion AI software to help companies evaluate the emotion of their employees.
         </p>
