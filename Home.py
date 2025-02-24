@@ -21,7 +21,7 @@ def main():
         </p>
         <div class='section'>Our Product & Customers</div>
         <p>
-            We provide a software that can evaluate the emotion of a person in multiple scenarios. We have customers from different industries, including HR, Sales, Marketing, Healthcare, Education, and more.
+            We provide a software that can evaluate the emotion of a person in multiple scenarios. We are trusted by customers from different industries, including HR, Sales, Marketing, Healthcare, Education, and more.
         </p>
         <hr>
         <div class='footnote'>
