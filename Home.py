@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide",
 )
 
-DEBUG = True
+DEBUG = False
 
 
 @set_styles

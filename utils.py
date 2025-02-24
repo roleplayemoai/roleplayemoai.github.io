@@ -84,7 +84,7 @@ def send_response(participant_id, scenario_name, response_index):
     collection = db["sent_responses"]
     response = get_saved_response(participant_id, scenario_name, response_index)
 
-    if forward_to := st.session_state.get("forward_to", None):
+    if forward_to := st.session_state.get(f"forward_to_{scenario_name}", None):
         response = f"<span style='font-size: 14px; color: gray;'>Forwarding to {forward_to}\n-----------------------------------------------------------------\n\n</span>{response}"
     collection.update_one(
         {
@@ -112,6 +112,19 @@ def get_sent_response(participant_id, scenario_name, response_index):
         }
     )
     return result["response"] if result else None
+
+
+def discard_response(participant_id, scenario_name, response_index):
+    collection = db["responses"]
+    collection.delete_one(
+        {
+            "participant_id": participant_id,
+            "scenario_name": scenario_name,
+            "response_index": response_index,
+        }
+    )
+    if st.session_state.get(f"forward_to_{scenario_name}"):
+        del st.session_state[f"forward_to_{scenario_name}"]
 
 
 @set_styles
@@ -163,7 +176,7 @@ def scenario(
         ) is not None:
             icon, content = st.columns([1, 14])
             icon.image("images/icon.png")
-            if forward_to := st.session_state.get("forward_to", None):
+            if forward_to := st.session_state.get(f"forward_to_{scenario_name}", None):
                 new_forward_to = content.selectbox(
                     "Forwarding to",
                     options=["Team Lead", "Manager", "CEO", "Technician", "UX Researcher", "Marketing Team"],
@@ -171,7 +184,7 @@ def scenario(
                     key=f"forward_to_selectbox_{participant_id}_{scenario_name}_{i}",
                 )
                 if new_forward_to != forward_to:
-                    st.session_state.forward_to = new_forward_to
+                    st.session_state[f"forward_to_{scenario_name}"] = new_forward_to
                     st.rerun()
             elif forward_to == None:
                 new_reply_to = content.text_input("Replying to", value=email_sender_email)
@@ -188,31 +201,38 @@ def scenario(
             if new_response != response:
                 save_response(participant_id, scenario_name, i, new_response)
                 st.rerun()
-            if content.button(
+            col1, col2 = content.columns([1, 6])
+            if col1.button(
                 "Send",
                 key="send_button",
             ):
                 send_response(participant_id, scenario_name, i)
                 save_response(participant_id, scenario_name, i, signature)
                 st.rerun()
+            if col2.button(
+                "Discard",
+                key="discard_button",
+            ):
+                discard_response(participant_id, scenario_name, i)
+                st.rerun()
             break
         else:
             col1, col2, col3 = content.columns([2,2.5,8])
             with col1:
                 if st.button(
-                    "Reply",
+                    "← Reply",
                     key="reply_button",
                 ):
                     save_response(participant_id, scenario_name, i, signature)
-                    st.session_state.forward_to = None
+                    st.session_state[f"forward_to_{scenario_name}"] = None
                     st.rerun()
             with col2:
                 if st.button(
-                    "Forward",
+                    "Forward →",
                     key="forward_button",
                 ):
                     save_response(participant_id, scenario_name, i, signature)
-                    st.session_state.forward_to = "Team Lead"
+                    st.session_state[f"forward_to_{scenario_name}"] = "Team Lead"
                     st.rerun()
             break
         i += 1
