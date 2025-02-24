@@ -4,7 +4,7 @@ from utils import scenario
 
 st.set_page_config(
     page_title="EmoAI Ethics",
-    page_icon="👩‍💼",
+    page_icon="✉️",
     layout="wide",
 )
 
