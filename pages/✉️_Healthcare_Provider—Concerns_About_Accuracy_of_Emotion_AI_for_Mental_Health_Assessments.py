@@ -12,8 +12,7 @@ st.set_page_config(
 email_sender = "Josep Garcés"
 email_sender_email = "jc2563@companyC.com"
 email_subject = "Concerns About Accuracy of Emotion AI for Mental Health Assessments"
-email_content = """
-
+email_content = """\
 Dear EmoAI Customer Support Team,
 
 I hope this email finds you well. My name is Josep Garcés, and I'm writing on behalf of Company C regarding some concerns raised about the Emotion AI software we use to assess mental health conditions.
@@ -24,9 +23,9 @@ Given our commitment to providing supportive and trustworthy mental health servi
 
 Sincerely,
 
--- \\
-Josep Garcés \\
-Chief Operating Officer \\
+---
+Josep Garcés
+Chief Operating Officer
 Company C [Healthcare Provider]"""
 
 if __name__ == "__main__":

@@ -12,8 +12,7 @@ st.set_page_config(
 email_sender = "Cynthia Huang"
 email_sender_email = "cynthia.huang@companyA.com"
 email_subject = "Concerns Regarding Potential Gender Bias in Emotion AI Software"
-email_content = """
-
+email_content = """\
 Dear EmoAI Customer Support Team,
 
 I'm reaching out from Company A regarding a concern with the Emotion AI software we use for evaluating candidates during video interviews.
@@ -24,11 +23,10 @@ This matter is critical not only for the integrity of our hiring process but als
 
 Best regards,
 
--- \\
-Cynthia Huang (she/her) \\
-Product Manager \\
+---
+Cynthia Huang (she/her)
+Product Manager
 Company A [HR Company]
-
 """
 
 if __name__ == "__main__":

@@ -8,6 +8,8 @@ st.set_page_config(
     layout="wide",
 )
 
+DEBUG = True
+
 
 @set_styles
 def main():
@@ -23,13 +25,23 @@ def main():
         </p>
         <hr>
         <div class='footnote'>
-            This website is developed as part of the student research to explore how role-playing help Emotion AI 
+            This website is developed as part of the student research to explore how role-playing help Emotion AI
             developers improve their awareness of ethical issues. Submitted answers will be used for research purposes only.
         </div>
-        """, unsafe_allow_html=True
+        """,
+        unsafe_allow_html=True,
     )
     if "participant_id" not in st.session_state:
-        st.session_state.participant_id = st.query_params["participant"]
+        if DEBUG:
+            import random
+            import string
+
+            participant_id = "".join(
+                random.choices(string.ascii_uppercase + string.digits, k=8)
+            )
+            st.session_state.participant_id = participant_id
+        else:
+            st.session_state.participant_id = st.query_params["participant"]
 
 
 if __name__ == "__main__":
