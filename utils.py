@@ -24,7 +24,7 @@ def set_styles(st_function):
 our_email_sender = "You"
 our_email_sender_email = "you@emoai.com"
 
-signature = """\n\n
+signature = """\n
 ---
 You
 you@emoai.com
@@ -85,8 +85,7 @@ def send_response(participant_id, scenario_name, response_index):
     response = get_saved_response(participant_id, scenario_name, response_index)
 
     if forward_to := st.session_state.get("forward_to", None):
-        response = f"Forwarding to {forward_to}\n-----------------------------------------------------------------\n\n{response}"
-
+        response = f"<span style='font-size: 14px; color: gray;'>Forwarding to {forward_to}\n-----------------------------------------------------------------\n\n</span>{response}"
     collection.update_one(
         {
             "participant_id": participant_id,
@@ -158,6 +157,7 @@ def scenario(
                 f"<div class='email-content'>{text_to_safe_html(sent_response)}</div>",
                 unsafe_allow_html=True,
             )
+            content.divider()
         elif (
             response := get_saved_response(participant_id, scenario_name, i)
         ) is not None:
@@ -166,12 +166,17 @@ def scenario(
             if forward_to := st.session_state.get("forward_to", None):
                 new_forward_to = content.selectbox(
                     "Forwarding to",
-                    options=["a@gmail.com", "b@gmail.com", "c@gmail.com"],
+                    options=["Team Lead", "Manager", "CEO", "Technician", "UX Researcher", "Marketing Team"],
                     index=0,
                     key=f"forward_to_selectbox_{participant_id}_{scenario_name}_{i}",
                 )
                 if new_forward_to != forward_to:
                     st.session_state.forward_to = new_forward_to
+                    st.rerun()
+            elif forward_to == None:
+                new_reply_to = content.text_input("Replying to", value=email_sender_email)
+                if new_reply_to != email_sender_email:
+                    st.session_state.reply_to = new_reply_to
                     st.rerun()
             new_response = content.text_area(
                 "Reply",
@@ -192,27 +197,19 @@ def scenario(
                 st.rerun()
             break
         else:
-            if i == 0:
-                if content.button(
-                    "Reply",
-                    key="reply_button",
-                ):
-                    save_response(participant_id, scenario_name, i, signature)
-                    st.session_state.forward_to = None
-                    st.rerun()
-                if content.button(
-                    "Forward",
-                    key="forward_button",
-                ):
-                    save_response(participant_id, scenario_name, i, signature)
-                    st.session_state.forward_to = "a@gmail.com"
-                    st.rerun()
-            else:
-                if content.button(
-                    "Reply",
-                    key="reply_button",
-                ):
-                    save_response(participant_id, scenario_name, i, signature)
-                    st.rerun()
+            if content.button(
+                "Reply",
+                key="reply_button",
+            ):
+                save_response(participant_id, scenario_name, i, signature)
+                st.session_state.forward_to = None
+                st.rerun()
+            if content.button(
+                "Forward",
+                key="forward_button",
+            ):
+                save_response(participant_id, scenario_name, i, signature)
+                st.session_state.forward_to = "Team Lead"
+                st.rerun()
             break
         i += 1

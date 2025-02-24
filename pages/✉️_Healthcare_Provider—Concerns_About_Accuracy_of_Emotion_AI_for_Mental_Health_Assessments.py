@@ -4,13 +4,13 @@ from utils import scenario
 
 st.set_page_config(
     page_title="EmoAI Ethics",
-    page_icon="🍀",
+    page_icon="💊",
     layout="wide",
 )
 
 
 email_sender = "Josep Garcés"
-email_sender_email = "jc2563@companyC.com"
+email_sender_email = "jc2563@HealthcareProvider.com"
 email_subject = "Concerns About Accuracy of Emotion AI for Mental Health Assessments"
 email_content = """\
 Dear EmoAI Customer Support Team,
@@ -26,7 +26,9 @@ Sincerely,
 ---
 Josep Garcés
 Chief Operating Officer
-Company C [Healthcare Provider]"""
+Healthcare Provider
+
+"""
 
 if __name__ == "__main__":
     scenario(
