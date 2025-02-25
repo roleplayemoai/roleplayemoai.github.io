@@ -13,16 +13,43 @@ DEBUG = False
 
 @set_styles
 def main():
-    st.markdown(
+    col1, mid, col2 = st.columns([5,0.5,4])
+    with col1:
+        st.markdown(
         """
         <div class='welcome'>👋 Welcome to EmoAI Inc.</div>
+        """,
+        unsafe_allow_html=True,
+        )
+        st.write('We provide Emotion AI software that analyzes facial expressions, voice tone, and body language to detect human emotions.')
+        st.write('Our AI solutions are designed to engage with humans and enable any industry to benefit from the insights of human emotions.')      
+    with col2:
+        st.image('images/EmoAI.png')
+
+    st.markdown(
+        """
+        <div class='section'>Mission & Principles</div>
+        <p>Our mission is to empower businesses to harness the power of human emotions to drive innovation and growth.</p>
         <p>
-            We are a startup company that provides Emotion AI software to help companies evaluate the emotion of their employees.
+            Our employees are action-driven professionals who excel at seeking information and resources to deliver innovative solutions. 
+            We prioritize rapid iteration and continuous learning while maintaining high ethical standards in our development of emotion AI technology.
         </p>
-        <div class='section'>Our Product & Customers</div>
+        <div class='section'>Our Customers</div>
         <p>
-            We provide a software that can evaluate the emotion of a person in multiple scenarios. We are trusted by customers from different industries, including HR, Sales, Marketing, Healthcare, Education, and more.
+            We are trusted by customers across various industries, including Healthcare, HR, IT Services, and more.
         </p>
+        """,
+        unsafe_allow_html=True,
+    )
+    col1_, col2_, col3_, col4_ = st.columns([2,2,2,4])
+    with col1_:
+        st.image('images/Logo-1.png', width=150)
+    with col2_:
+        st.image('images/Logo-2.png', width=150)
+    with col3_:
+        st.image('images/Logo-3.png', width=150)
+    st.markdown(
+        """
         <hr>
         <div class='footnote'>
             This website is developed as part of the student research to explore how role-playing help Emotion AI

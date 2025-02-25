@@ -18,16 +18,26 @@ button {
 }
 
 .email-subject,.welcome {
-    font-size: 20px;
+    font-size: 22px;
     color: #000000;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
-.email-sender, .section {
+.section {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.email-sender {
     font-size: 16px;
     font-weight: 600;
     color: #000000;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .email-sender-email {

@@ -220,7 +220,7 @@ def scenario(
             col1, col2, col3 = content.columns([2,2.5,8])
             with col1:
                 if st.button(
-                    "← Reply",
+                    "Reply",
                     key="reply_button",
                 ):
                     save_response(participant_id, scenario_name, i, signature)
@@ -228,7 +228,7 @@ def scenario(
                     st.rerun()
             with col2:
                 if st.button(
-                    "Forward →",
+                    "Forward",
                     key="forward_button",
                 ):
                     save_response(participant_id, scenario_name, i, signature)
@@ -236,3 +236,13 @@ def scenario(
                     st.rerun()
             break
         i += 1
+    st.markdown(
+        """
+        <hr>
+        <div class='footnote'>
+            This website is developed as part of the student research to explore how role-playing help Emotion AI
+            developers improve their awareness of ethical issues. Submitted answers will be used for research purposes only.
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
