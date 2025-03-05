@@ -15,7 +15,7 @@ email_subject = "Concerns About Accuracy of Emotion AI for Mental Health Assessm
 email_content = """\
 Dear EmoAI Customer Support Team,
 
-I hope this email finds you well. My name is Josep Garcés, and I'm writing on behalf of Company C regarding some concerns raised about the Emotion AI software we use to assess mental health conditions.
+I hope this email finds you well. My name is Josep Garcés, and I'm writing on behalf of Healthcare Provider regarding some concerns raised about the Emotion AI software we use to assess mental health conditions.
 
 Recently, a user reported being flagged as "high risk" for anxiety, which caused them additional stress and feelings of stigma. We've since received similar feedback from other users, questioning both the accuracy and sensitivity of the assessments.
 

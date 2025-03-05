@@ -18,11 +18,11 @@ def main():
         st.markdown(
         """
         <div class='welcome'>👋 Welcome to EmoAI Inc.</div>
+        <p>We are a B2B company that provides Emotion AI software to <span style="background-color: #fff1ab;">help businesses analyze facial expressions, voice tone, and body language to detect human emotions</span>.</p>
+        <p>Our AI solutions are designed to engage with humans and enable any industry to benefit from the insights of human emotions.</p>
         """,
         unsafe_allow_html=True,
-        )
-        st.write('We provide Emotion AI software that analyzes facial expressions, voice tone, and body language to detect human emotions.')
-        st.write('Our AI solutions are designed to engage with humans and enable any industry to benefit from the insights of human emotions.')      
+        ) 
     with col2:
         st.image('images/EmoAI.png')
 
@@ -41,13 +41,13 @@ def main():
         """,
         unsafe_allow_html=True,
     )
-    col1_, col2_, col3_, col4_ = st.columns([2,2,2,4])
+    col1_, col2_, col3_, col4_ = st.columns([2,2,2,5])
     with col1_:
-        st.image('images/Logo-1.png', width=150)
+        st.image('images/Logo-1.png')
     with col2_:
-        st.image('images/Logo-2.png', width=150)
+        st.image('images/Logo-2.png')
     with col3_:
-        st.image('images/Logo-3.png', width=150)
+        st.image('images/Logo-3.png')
     st.markdown(
         """
         <hr>

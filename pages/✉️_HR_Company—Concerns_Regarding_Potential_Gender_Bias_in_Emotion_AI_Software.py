@@ -15,7 +15,7 @@ email_subject = "Concerns Regarding Potential Gender Bias in Emotion AI Software
 email_content = """\
 Dear EmoAI Customer Support Team,
 
-I'm reaching out from Company A regarding a concern with the Emotion AI software we use for evaluating candidates during video interviews.
+I'm reaching out from HR Company regarding a concern with the Emotion AI software we use for evaluating candidates during video interviews.
 
 Recently, one of the candidates of our customer raised a complaint on social media, claiming that your AI software is potentially biased toward male candidates. Upon reviewing the situation, we've noticed a potential pattern that aligns with the candidate's claim, which raises concerns about the fairness and credibility of our application.
 
