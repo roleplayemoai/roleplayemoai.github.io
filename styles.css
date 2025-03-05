@@ -10,6 +10,10 @@ button {
     margin-bottom: 15px !important;
 }
 
+ul {
+    padding-left: 40px;
+}
+
 .stTextArea textarea {
     background-color: white !important;
     border: 1px solid #bbbabab1 !important;
