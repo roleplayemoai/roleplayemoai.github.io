@@ -14,6 +14,10 @@ ul {
     padding-left: 40px;
 }
 
+.highlighted {
+    background-color: #fff1ab;
+}
+
 .stTextArea textarea {
     background-color: white !important;
     border: 1px solid #bbbabab1 !important;

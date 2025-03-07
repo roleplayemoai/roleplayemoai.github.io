@@ -38,5 +38,6 @@ if __name__ == "__main__":
         email_sender_email,
         email_subject,
         email_content,
+        None,
         "Scenario 2",
     )

@@ -133,6 +133,7 @@ def scenario(
     email_sender_email,
     email_subject,
     email_content,
+    attachment,
     scenario_name,
 ):
     participant_id = st.session_state.participant_id
@@ -154,7 +155,9 @@ def scenario(
         f"<div class='email-content'>{text_to_safe_html(email_content)}</div>",
         unsafe_allow_html=True,
     )
-
+    if attachment is not None:
+        content.image(attachment)
+    content.divider()
     i = 0
     while True:
         if (
@@ -238,6 +241,9 @@ def scenario(
         i += 1
     st.markdown(
         """
+        <br>
+        <br>
+        <br>
         <hr>
         <div class='footnote'>
             This website is developed as part of the student research to explore how role-playing help Emotion AI
