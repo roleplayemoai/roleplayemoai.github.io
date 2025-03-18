@@ -15,7 +15,7 @@ email_subject = "Proposal for Collaboration on Emotion AI for Internal Assessmen
 email_content = """\
 Dear EmoAI Sale Representative,
 
-I'm Mahadi Gupta from Leading IT Company. We are exploring the use of your Emotion AI software to develop an internal tool for evaluating employee performance.
+I'm Mahadi Gupta from Leading IT Company. We are exploring the use of your Emotion AI software to develop an internal tool for evaluating employee's performance and mental health. To make sure our employees can maintain both a healthy mental state and focus, we aim to use your product to monitor our employees' conditions during work and meetings. Additionally, we would like to use Emotion AI during recruitment to understand the genuine emotions, attitudes, and thoughts of the candidates.
 
 We believe this collaboration presents a great opportunity to showcase your software's capabilities and position your company as a key partner for one of the largest global IT companies. If successful, we would be happy to feature your organization as a collaborator in our internal and external communications.
 

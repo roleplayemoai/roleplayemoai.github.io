@@ -83,11 +83,11 @@ def main():
     )
     col1_, col2_, col3_, col4_ = st.columns([2,2,2,5])
     with col1_:
-        st.image('images/Logo-1.png')
+        st.image('images/Logo-1.svg',width=200)
     with col2_:
-        st.image('images/Logo-2.png')
+        st.image('images/Logo-2.svg',width=200)
     with col3_:
-        st.image('images/Logo-3.png')
+        st.image('images/Logo-3.svg',width=200)
     st.markdown(
         """
         <br>

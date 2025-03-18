@@ -146,7 +146,7 @@ def scenario(
     )
 
     icon, content = st.columns([1, 14])
-    icon.image("images/icon.png")
+    icon.image("images/icon.svg",width=50)
     content.markdown(
         f"<div class='email-sender'>{email_sender} <span class='email-sender-email' style='margin-left: 2px;'>{email_sender_email}</span></div>",
         unsafe_allow_html=True,
@@ -156,7 +156,7 @@ def scenario(
         unsafe_allow_html=True,
     )
     if attachment is not None:
-        content.image(attachment)
+        content.image(attachment, width=650)
     content.divider()
     i = 0
     while True:
@@ -164,7 +164,7 @@ def scenario(
             sent_response := get_sent_response(participant_id, scenario_name, i)
         ) is not None:
             icon, content = st.columns([1, 14])
-            icon.image("images/icon.png")
+            icon.image("images/icon.svg",width=50)
             content.markdown(
                 "<div class='email-sender'>You <span class='email-sender-email' style='margin-left: 2px;'>you@emoai.com</span></div>",
                 unsafe_allow_html=True,
@@ -178,7 +178,7 @@ def scenario(
             response := get_saved_response(participant_id, scenario_name, i)
         ) is not None:
             icon, content = st.columns([1, 14])
-            icon.image("images/icon.png")
+            icon.image("images/icon.svg",width=50)
             if forward_to := st.session_state.get(f"forward_to_{scenario_name}", None):
                 new_forward_to = content.selectbox(
                     "Forwarding to",
