@@ -16,6 +16,7 @@ def main():
     st.markdown(
         """
         <div class='welcome'>📋 Instructions</div>
+        <br>
         <p>Thanks for participating in our study! In this session, you will be role-playing as a tech worker working for EmoAI Inc., which sells Emotion AI softwares to other businesses (B2B).</p>
         <p><b>EmoAI Mission & Principles</b></p>
         <p>Our mission is to empower businesses to harness the power of human emotions to drive innovation and growth.</p>
