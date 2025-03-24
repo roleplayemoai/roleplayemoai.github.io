@@ -21,7 +21,7 @@ def main():
         """,
         unsafe_allow_html=True,
     )
-    st.image("images/News.jpg", width=650)
+    st.image("images/News.svg", width=650)
     st.markdown(
         """
         <p><b>Tech workers voice concerns over invasive monitoring system that scans facial expressions and emotions during work hours and meetings.</b></p>
