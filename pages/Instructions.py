@@ -23,7 +23,7 @@ def main():
         <p>Our employees are <span class='highlighted'>action-driven professionals</span> who excel at seeking information and resources to deliver innovative solutions. We prioritize <span class="highlighted">rapid iteration and continuous learning while maintaining high ethical standards</span> in our development of emotion AI technology.</p>
         <p><b>What you will do</b></p>
         <ol>
-            <li>You will be given a series of emails from three customers (see emails on the left sidebar). Start by <span class='highlighted'>reviewing the emails</span>.</li>
+            <li>You will be given a series of emails from three coworkers at EmoAI (see emails on the left sidebar). Start by <span class='highlighted'>reviewing the emails</span>.</li>
             <li>After reviewing the emails, your task is to <span class='highlighted'>reply to these emails</span>. (The emails do not have to be answered in order.)</li>
             <ul>
                 <li>You are allowed to use the internet to search for information to help you reply to the emails.</li>
