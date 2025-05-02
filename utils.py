@@ -182,7 +182,7 @@ def scenario(
             if forward_to := st.session_state.get(f"forward_to_{scenario_name}", None):
                 new_forward_to = content.selectbox(
                     "Forwarding to",
-                    options=["Team Lead", "Manager", "CEO", "Technician", "UX Researcher", "Marketing Team"],
+                    options=["Manager", "CEO", "Engineer", "UX Researcher", "Marketing Team", "Other (specify in the email)"],
                     index=0,
                     key=f"forward_to_selectbox_{participant_id}_{scenario_name}_{i}",
                 )
