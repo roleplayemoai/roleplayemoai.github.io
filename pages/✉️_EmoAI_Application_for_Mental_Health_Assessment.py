@@ -11,7 +11,7 @@ st.set_page_config(
 
 email_sender = "Josep Garcés"
 email_sender_email = "josep.garces@emoai.com"
-email_subject = "EmoAI Application with School District"
+email_subject = "EmoAI Application for Mental Health Assessment"
 email_content = """\
 We recently signed a new agreement with a health care provider to use EmoAI to help assess patients' mental health by analyzing their emotional states. Before building the system, our user research team conducted a study and observed that the Emotion AI system can sometimes make incorrect emotional assessments in mental health contexts.
 
