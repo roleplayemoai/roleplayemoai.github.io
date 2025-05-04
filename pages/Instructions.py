@@ -23,11 +23,11 @@ def main():
         <p>Our employees are <span class='highlighted'>action-driven professionals</span> who excel at seeking information and resources to deliver innovative solutions. We prioritize <span class="highlighted">rapid iteration and continuous learning while maintaining high ethical standards</span> in our development of emotion AI technology.</p>
         <p><b>What you will do</b></p>
         <ol>
-            <li>You will be given a series of emails from three coworkers at EmoAI (see emails on the left sidebar). Start by <span class='highlighted'>reviewing the emails</span>.</li>
+            <li>You will be given a series of emails from your project manager. Start by <span class='highlighted'>reviewing the emails on the left sidebar</span>.</li>
             <li>After reviewing the emails, your task is to <span class='highlighted'>reply to these emails</span>. (The emails do not have to be answered in order.)</li>
             <ul>
                 <li>You are allowed to use the internet to search for information to help you reply to the emails.</li>
-                <li>You can forward the emails to your colleagues (e.g. team lead, manager, technician, etc.) for questions you may have or for help.</li>
+                <li>You can forward the emails to your colleagues (e.g. CEO, engineer, UX researcher, sales/marketing team, etc.) for questions you may have or for help.</li>
                 <li>We encorage you to "think out loud" which means to say everything that comes to mind while completing a task.</li>
             </ul>
             <li>After you've replied to all the emails, we will have <span class='highlighted'>a short discussion</span> about the activity.</li>
