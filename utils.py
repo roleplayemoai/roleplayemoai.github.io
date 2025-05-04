@@ -1,4 +1,5 @@
 from datetime import datetime
+import random
 
 import streamlit as st
 from pymongo import MongoClient
@@ -33,6 +34,18 @@ EmoAI Inc."""
 
 client = MongoClient(st.secrets["MONGO_URI"])
 db = client["emoai"]
+
+
+def get_random_email_pages(participant_id):
+    collection = db["email_pages"]
+    result = collection.find_one({"participant_id": participant_id})
+    if result:
+        return result["email_pages"]
+    else:
+        email_pages = list(range(1, 4))
+        random.shuffle(email_pages)
+        collection.insert_one({"participant_id": participant_id, "email_pages": email_pages})
+        return email_pages
 
 
 def text_to_safe_html(text):

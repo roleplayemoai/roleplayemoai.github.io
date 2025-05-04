@@ -2,11 +2,6 @@ import streamlit as st
 
 from utils import set_styles
 
-st.set_page_config(
-    page_title="EmoAI Today Journal | Role Playing Emotion AI Research",
-    page_icon="🚨",
-    layout="centered",
-)
 
 DEBUG = False
 
@@ -53,5 +48,4 @@ def main():
             st.session_state.participant_id = st.query_params["participant"]
 
 
-if __name__ == "__main__":
-    main()
+main()

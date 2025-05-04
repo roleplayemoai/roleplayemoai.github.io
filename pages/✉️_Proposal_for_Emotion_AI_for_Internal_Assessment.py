@@ -2,12 +2,6 @@ import streamlit as st
 
 from utils import scenario
 
-st.set_page_config(
-    page_title="EmoAI Ethics",
-    page_icon="✉️",
-    layout="wide",
-)
-
 
 email_sender = "Cynthia Huang"
 email_sender_email = "cynthia.huang@emoai.com"
@@ -30,12 +24,11 @@ EmoAI Inc.
 
 """
 
-if __name__ == "__main__":
-    scenario(
-        email_sender,
-        email_sender_email,
-        email_subject,
-        email_content,
-        None,
-        "Scenario 2",
-    )
+scenario(
+    email_sender,
+    email_sender_email,
+    email_subject,
+    email_content,
+    None,
+    "Scenario 2",
+)

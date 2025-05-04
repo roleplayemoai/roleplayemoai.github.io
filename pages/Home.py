@@ -1,12 +1,7 @@
 import streamlit as st
 
-from utils import set_styles
+from utils import get_random_email_pages, set_styles
 
-st.set_page_config(
-    page_title="EmoAI Ethics",
-    page_icon="🤖",
-    layout="wide",
-)
 
 DEBUG = False
 
@@ -101,6 +96,13 @@ def main():
         """,
         unsafe_allow_html=True,
     )
+    
+    # Initialize session state for participant ID
+    initialize_participant_id()
+
+
+def initialize_participant_id():
+    """Initialize the participant ID in session state"""
     if "participant_id" not in st.session_state:
         if DEBUG:
             import random
@@ -114,5 +116,9 @@ def main():
             st.session_state.participant_id = st.query_params["participant"]
 
 
-if __name__ == "__main__":
-    main()
+def test():
+    initialize_participant_id()
+    st.write(get_random_email_pages(st.session_state.participant_id))
+
+
+main()
