@@ -12,7 +12,7 @@ def initialize_participant_id():
 if __name__ == "__main__":
     initialize_participant_id()
 
-    home_page = st.Page("pages/Home.py", title="Home", icon="🏠")
+    home_page = st.Page("pages/EmoAI.py", title="Home", icon="🏠")
     instructions_page = st.Page("pages/Instructions.py", title="Instructions", icon="📋")
 
     potential_gender_bias_in_video_interviews_page = st.Page(
